@@ -1,0 +1,1198 @@
+[2024-09-08T08:59:03.485+0000] {processor.py:186} INFO - Started process (PID=36) to work on /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T08:59:03.540+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/d_1_batch_processing_spark.py for tasks to queue
+[2024-09-08T08:59:03.823+0000] {logging_mixin.py:190} INFO - [2024-09-08T08:59:03.757+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T08:59:47.862+0000] {logging_mixin.py:190} INFO - [2024-09-08T08:59:47.846+0000] {timeout.py:68} ERROR - Process timed out, PID: 36
+[2024-09-08T08:59:47.869+0000] {logging_mixin.py:190} WARNING - Exception ignored in: <bound method _MultipleClassMarker._remove_item of <sqlalchemy.orm.clsregistry._MultipleClassMarker object at 0x7fbc1721e250>>
+[2024-09-08T08:59:47.871+0000] {logging_mixin.py:190} WARNING - Traceback (most recent call last):
+[2024-09-08T08:59:47.872+0000] {logging_mixin.py:190} WARNING -   File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/orm/clsregistry.py", line 157, in _remove_item
+[2024-09-08T08:59:47.892+0000] {logging_mixin.py:190} WARNING -     def _remove_item(self, ref):
+[2024-09-08T08:59:47.893+0000] {logging_mixin.py:190} WARNING -   File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/timeout.py", line 69, in handle_timeout
+[2024-09-08T08:59:47.897+0000] {logging_mixin.py:190} WARNING -     raise AirflowTaskTimeout(self.error_message)
+[2024-09-08T08:59:47.900+0000] {logging_mixin.py:190} WARNING - airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/d_1_batch_processing_spark.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.10.0/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.10.0/best-practices.html#reducing-dag-complexity, PID: 36
+[2024-09-08T09:00:12.831+0000] {logging_mixin.py:190} INFO - [2024-09-08T09:00:12.212+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/d_1_batch_processing_spark.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/d_1_batch_processing_spark.py", line 69, in <module>
+    op_top_countries_get_data = PythonOperator(
+                                ^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 473, in apply_defaults
+    raise AirflowException(f"missing keyword argument {missing_args.pop()!r}")
+airflow.exceptions.AirflowException: missing keyword argument 'python_callable'
+[2024-09-08T09:00:12.910+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T09:00:14.518+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/d_1_batch_processing_spark.py took 72.047 seconds
+[2024-09-08T09:02:38.856+0000] {processor.py:186} INFO - Started process (PID=41) to work on /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T09:02:38.859+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/d_1_batch_processing_spark.py for tasks to queue
+[2024-09-08T09:02:38.863+0000] {logging_mixin.py:190} INFO - [2024-09-08T09:02:38.862+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T09:02:43.998+0000] {logging_mixin.py:190} INFO - [2024-09-08T09:02:43.966+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/d_1_batch_processing_spark.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/d_1_batch_processing_spark.py", line 69, in <module>
+    op_top_countries_get_data = PythonOperator(
+                                ^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 473, in apply_defaults
+    raise AirflowException(f"missing keyword argument {missing_args.pop()!r}")
+airflow.exceptions.AirflowException: missing keyword argument 'python_callable'
+[2024-09-08T09:02:44.001+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T09:02:44.152+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/d_1_batch_processing_spark.py took 5.305 seconds
+[2024-09-08T09:03:21.791+0000] {processor.py:186} INFO - Started process (PID=46) to work on /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T09:03:21.818+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/d_1_batch_processing_spark.py for tasks to queue
+[2024-09-08T09:03:21.930+0000] {logging_mixin.py:190} INFO - [2024-09-08T09:03:21.914+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T09:04:53.073+0000] {logging_mixin.py:190} INFO - [2024-09-08T09:04:53.015+0000] {timeout.py:68} ERROR - Process timed out, PID: 46
+[2024-09-08T09:04:53.111+0000] {logging_mixin.py:190} WARNING - Exception ignored in: <bound method _MultipleClassMarker._remove_item of <sqlalchemy.orm.clsregistry._MultipleClassMarker object at 0x7fbc1721e250>>
+[2024-09-08T09:04:53.115+0000] {logging_mixin.py:190} WARNING - Traceback (most recent call last):
+[2024-09-08T09:04:53.117+0000] {logging_mixin.py:190} WARNING -   File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/orm/clsregistry.py", line 157, in _remove_item
+[2024-09-08T09:04:53.159+0000] {logging_mixin.py:190} WARNING -     def _remove_item(self, ref):
+[2024-09-08T09:04:53.162+0000] {logging_mixin.py:190} WARNING -   File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/timeout.py", line 69, in handle_timeout
+[2024-09-08T09:04:53.174+0000] {logging_mixin.py:190} WARNING -     raise AirflowTaskTimeout(self.error_message)
+[2024-09-08T09:04:53.184+0000] {logging_mixin.py:190} WARNING - airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/d_1_batch_processing_spark.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.10.0/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.10.0/best-practices.html#reducing-dag-complexity, PID: 46
+[2024-09-08T09:05:02.129+0000] {logging_mixin.py:190} INFO - [2024-09-08T09:05:01.898+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/d_1_batch_processing_spark.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/d_1_batch_processing_spark.py", line 69, in <module>
+    op_top_countries_get_data = PythonOperator(
+                                ^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 473, in apply_defaults
+    raise AirflowException(f"missing keyword argument {missing_args.pop()!r}")
+airflow.exceptions.AirflowException: missing keyword argument 'python_callable'
+[2024-09-08T09:05:02.147+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T09:05:03.087+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/d_1_batch_processing_spark.py took 101.794 seconds
+[2024-09-08T09:05:34.770+0000] {processor.py:186} INFO - Started process (PID=50) to work on /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T09:05:34.773+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/d_1_batch_processing_spark.py for tasks to queue
+[2024-09-08T09:05:34.777+0000] {logging_mixin.py:190} INFO - [2024-09-08T09:05:34.776+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T09:06:17.982+0000] {logging_mixin.py:190} INFO - [2024-09-08T09:06:17.954+0000] {timeout.py:68} ERROR - Process timed out, PID: 50
+[2024-09-08T09:06:17.995+0000] {logging_mixin.py:190} WARNING - Exception ignored in: <bound method _MultipleClassMarker._remove_item of <sqlalchemy.orm.clsregistry._MultipleClassMarker object at 0x7fbc1721e250>>
+[2024-09-08T09:06:17.997+0000] {logging_mixin.py:190} WARNING - Traceback (most recent call last):
+[2024-09-08T09:06:17.999+0000] {logging_mixin.py:190} WARNING -   File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/orm/clsregistry.py", line 157, in _remove_item
+[2024-09-08T09:06:18.022+0000] {logging_mixin.py:190} WARNING -     def _remove_item(self, ref):
+[2024-09-08T09:06:18.027+0000] {logging_mixin.py:190} WARNING -   File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/timeout.py", line 69, in handle_timeout
+[2024-09-08T09:06:18.034+0000] {logging_mixin.py:190} WARNING -     raise AirflowTaskTimeout(self.error_message)
+[2024-09-08T09:06:18.059+0000] {logging_mixin.py:190} WARNING - airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/d_1_batch_processing_spark.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.10.0/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.10.0/best-practices.html#reducing-dag-complexity, PID: 50
+[2024-09-08T09:06:27.589+0000] {logging_mixin.py:190} INFO - [2024-09-08T09:06:27.522+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/d_1_batch_processing_spark.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/d_1_batch_processing_spark.py", line 69, in <module>
+    op_top_countries_get_data = PythonOperator(
+                                ^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 473, in apply_defaults
+    raise AirflowException(f"missing keyword argument {missing_args.pop()!r}")
+airflow.exceptions.AirflowException: missing keyword argument 'python_callable'
+[2024-09-08T09:06:27.607+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T09:06:27.739+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/d_1_batch_processing_spark.py took 53.001 seconds
+[2024-09-08T09:07:52.158+0000] {processor.py:186} INFO - Started process (PID=55) to work on /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T09:07:52.187+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/d_1_batch_processing_spark.py for tasks to queue
+[2024-09-08T09:07:52.413+0000] {logging_mixin.py:190} INFO - [2024-09-08T09:07:52.396+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T09:08:55.156+0000] {logging_mixin.py:190} INFO - [2024-09-08T09:08:55.092+0000] {timeout.py:68} ERROR - Process timed out, PID: 55
+[2024-09-08T09:08:55.179+0000] {logging_mixin.py:190} WARNING - Exception ignored in: <bound method _MultipleClassMarker._remove_item of <sqlalchemy.orm.clsregistry._MultipleClassMarker object at 0x7fbc1721e250>>
+[2024-09-08T09:08:55.183+0000] {logging_mixin.py:190} WARNING - Traceback (most recent call last):
+[2024-09-08T09:08:55.185+0000] {logging_mixin.py:190} WARNING -   File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/orm/clsregistry.py", line 157, in _remove_item
+[2024-09-08T09:08:55.212+0000] {logging_mixin.py:190} WARNING -     def _remove_item(self, ref):
+[2024-09-08T09:08:55.217+0000] {logging_mixin.py:190} WARNING -   File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/timeout.py", line 69, in handle_timeout
+[2024-09-08T09:08:55.220+0000] {logging_mixin.py:190} WARNING -     raise AirflowTaskTimeout(self.error_message)
+[2024-09-08T09:08:55.229+0000] {logging_mixin.py:190} WARNING - airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/d_1_batch_processing_spark.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.10.0/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.10.0/best-practices.html#reducing-dag-complexity, PID: 55
+[2024-09-08T09:09:15.807+0000] {logging_mixin.py:190} INFO - [2024-09-08T09:09:15.560+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/d_1_batch_processing_spark.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/d_1_batch_processing_spark.py", line 69, in <module>
+    op_top_countries_get_data = PythonOperator(
+                                ^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 473, in apply_defaults
+    raise AirflowException(f"missing keyword argument {missing_args.pop()!r}")
+airflow.exceptions.AirflowException: missing keyword argument 'python_callable'
+[2024-09-08T09:09:15.833+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T09:09:16.914+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/d_1_batch_processing_spark.py took 84.984 seconds
+[2024-09-08T09:09:49.045+0000] {processor.py:186} INFO - Started process (PID=60) to work on /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T09:09:49.189+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/d_1_batch_processing_spark.py for tasks to queue
+[2024-09-08T09:09:51.111+0000] {logging_mixin.py:190} INFO - [2024-09-08T09:09:50.863+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T09:11:25.998+0000] {logging_mixin.py:190} INFO - [2024-09-08T09:11:25.788+0000] {timeout.py:68} ERROR - Process timed out, PID: 60
+[2024-09-08T09:11:26.023+0000] {logging_mixin.py:190} WARNING - Exception ignored in: <bound method _MultipleClassMarker._remove_item of <sqlalchemy.orm.clsregistry._MultipleClassMarker object at 0x7fbc1721e250>>
+[2024-09-08T09:11:26.026+0000] {logging_mixin.py:190} WARNING - Traceback (most recent call last):
+[2024-09-08T09:11:26.029+0000] {logging_mixin.py:190} WARNING -   File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/orm/clsregistry.py", line 157, in _remove_item
+[2024-09-08T09:11:26.076+0000] {logging_mixin.py:190} WARNING -     def _remove_item(self, ref):
+[2024-09-08T09:11:26.079+0000] {logging_mixin.py:190} WARNING -   File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/timeout.py", line 69, in handle_timeout
+[2024-09-08T09:11:26.083+0000] {logging_mixin.py:190} WARNING -     raise AirflowTaskTimeout(self.error_message)
+[2024-09-08T09:11:26.093+0000] {logging_mixin.py:190} WARNING - airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/d_1_batch_processing_spark.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.10.0/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.10.0/best-practices.html#reducing-dag-complexity, PID: 60
+[2024-09-08T09:11:47.790+0000] {logging_mixin.py:190} INFO - [2024-09-08T09:11:47.450+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/d_1_batch_processing_spark.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/d_1_batch_processing_spark.py", line 69, in <module>
+    op_top_countries_get_data = PythonOperator(
+                                ^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 473, in apply_defaults
+    raise AirflowException(f"missing keyword argument {missing_args.pop()!r}")
+airflow.exceptions.AirflowException: missing keyword argument 'python_callable'
+[2024-09-08T09:11:47.836+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T09:11:48.567+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/d_1_batch_processing_spark.py took 120.137 seconds
+[2024-09-08T09:12:20.114+0000] {processor.py:186} INFO - Started process (PID=65) to work on /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T09:12:20.171+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/d_1_batch_processing_spark.py for tasks to queue
+[2024-09-08T09:12:20.203+0000] {logging_mixin.py:190} INFO - [2024-09-08T09:12:20.202+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T09:12:33.529+0000] {logging_mixin.py:190} INFO - [2024-09-08T09:12:33.479+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/d_1_batch_processing_spark.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/d_1_batch_processing_spark.py", line 69, in <module>
+    op_top_countries_get_data = PythonOperator(
+                                ^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 473, in apply_defaults
+    raise AirflowException(f"missing keyword argument {missing_args.pop()!r}")
+airflow.exceptions.AirflowException: missing keyword argument 'python_callable'
+[2024-09-08T09:12:33.533+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T09:12:33.779+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/d_1_batch_processing_spark.py took 13.681 seconds
+[2024-09-08T09:13:06.239+0000] {processor.py:186} INFO - Started process (PID=70) to work on /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T09:13:06.261+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/d_1_batch_processing_spark.py for tasks to queue
+[2024-09-08T09:13:06.293+0000] {logging_mixin.py:190} INFO - [2024-09-08T09:13:06.293+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T09:13:29.320+0000] {logging_mixin.py:190} INFO - [2024-09-08T09:13:29.147+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/d_1_batch_processing_spark.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/d_1_batch_processing_spark.py", line 69, in <module>
+    op_top_countries_get_data = PythonOperator(
+                                ^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 473, in apply_defaults
+    raise AirflowException(f"missing keyword argument {missing_args.pop()!r}")
+airflow.exceptions.AirflowException: missing keyword argument 'python_callable'
+[2024-09-08T09:13:29.330+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T09:13:29.681+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/d_1_batch_processing_spark.py took 23.462 seconds
+[2024-09-08T09:14:00.090+0000] {processor.py:186} INFO - Started process (PID=75) to work on /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T09:14:00.094+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/d_1_batch_processing_spark.py for tasks to queue
+[2024-09-08T09:14:00.102+0000] {logging_mixin.py:190} INFO - [2024-09-08T09:14:00.101+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T09:14:17.363+0000] {logging_mixin.py:190} INFO - [2024-09-08T09:14:17.314+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/d_1_batch_processing_spark.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/d_1_batch_processing_spark.py", line 69, in <module>
+    op_top_countries_get_data = PythonOperator(
+                                ^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 473, in apply_defaults
+    raise AirflowException(f"missing keyword argument {missing_args.pop()!r}")
+airflow.exceptions.AirflowException: missing keyword argument 'python_callable'
+[2024-09-08T09:14:17.367+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T09:14:17.594+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/d_1_batch_processing_spark.py took 17.530 seconds
+[2024-09-08T09:14:53.678+0000] {processor.py:186} INFO - Started process (PID=80) to work on /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T09:14:53.718+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/d_1_batch_processing_spark.py for tasks to queue
+[2024-09-08T09:14:53.843+0000] {logging_mixin.py:190} INFO - [2024-09-08T09:14:53.823+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T09:15:13.929+0000] {logging_mixin.py:190} INFO - [2024-09-08T09:15:13.851+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/d_1_batch_processing_spark.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/d_1_batch_processing_spark.py", line 69, in <module>
+    op_top_countries_get_data = PythonOperator(
+                                ^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 473, in apply_defaults
+    raise AirflowException(f"missing keyword argument {missing_args.pop()!r}")
+airflow.exceptions.AirflowException: missing keyword argument 'python_callable'
+[2024-09-08T09:15:13.935+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T09:15:14.168+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/d_1_batch_processing_spark.py took 22.928 seconds
+[2024-09-08T09:15:45.238+0000] {processor.py:186} INFO - Started process (PID=85) to work on /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T09:15:45.262+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/d_1_batch_processing_spark.py for tasks to queue
+[2024-09-08T09:15:45.400+0000] {logging_mixin.py:190} INFO - [2024-09-08T09:15:45.363+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T09:16:04.290+0000] {logging_mixin.py:190} INFO - [2024-09-08T09:16:04.262+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/d_1_batch_processing_spark.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/d_1_batch_processing_spark.py", line 69, in <module>
+    op_top_countries_get_data = PythonOperator(
+                                ^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 473, in apply_defaults
+    raise AirflowException(f"missing keyword argument {missing_args.pop()!r}")
+airflow.exceptions.AirflowException: missing keyword argument 'python_callable'
+[2024-09-08T09:16:04.294+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T09:16:04.411+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/d_1_batch_processing_spark.py took 19.253 seconds
+[2024-09-08T09:16:36.253+0000] {processor.py:186} INFO - Started process (PID=90) to work on /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T09:16:36.506+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/d_1_batch_processing_spark.py for tasks to queue
+[2024-09-08T09:16:36.990+0000] {logging_mixin.py:190} INFO - [2024-09-08T09:16:36.926+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T09:17:59.245+0000] {logging_mixin.py:190} INFO - [2024-09-08T09:17:58.910+0000] {timeout.py:68} ERROR - Process timed out, PID: 90
+[2024-09-08T09:17:59.332+0000] {logging_mixin.py:190} WARNING - Exception ignored in: <bound method _MultipleClassMarker._remove_item of <sqlalchemy.orm.clsregistry._MultipleClassMarker object at 0x7fbc1721e250>>
+[2024-09-08T09:17:59.339+0000] {logging_mixin.py:190} WARNING - Traceback (most recent call last):
+[2024-09-08T09:17:59.346+0000] {logging_mixin.py:190} WARNING -   File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/orm/clsregistry.py", line 157, in _remove_item
+[2024-09-08T09:17:59.401+0000] {logging_mixin.py:190} WARNING -     def _remove_item(self, ref):
+[2024-09-08T09:17:59.406+0000] {logging_mixin.py:190} WARNING -   File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/timeout.py", line 69, in handle_timeout
+[2024-09-08T09:17:59.426+0000] {logging_mixin.py:190} WARNING -     raise AirflowTaskTimeout(self.error_message)
+[2024-09-08T09:17:59.444+0000] {logging_mixin.py:190} WARNING - airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/d_1_batch_processing_spark.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.10.0/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.10.0/best-practices.html#reducing-dag-complexity, PID: 90
+[2024-09-08T09:18:14.643+0000] {logging_mixin.py:190} INFO - [2024-09-08T09:18:14.526+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/d_1_batch_processing_spark.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/d_1_batch_processing_spark.py", line 69, in <module>
+    op_top_countries_get_data = PythonOperator(
+                                ^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 473, in apply_defaults
+    raise AirflowException(f"missing keyword argument {missing_args.pop()!r}")
+airflow.exceptions.AirflowException: missing keyword argument 'python_callable'
+[2024-09-08T09:18:14.658+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T09:18:15.107+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/d_1_batch_processing_spark.py took 99.804 seconds
+[2024-09-08T09:18:59.212+0000] {processor.py:186} INFO - Started process (PID=95) to work on /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T09:18:59.228+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/d_1_batch_processing_spark.py for tasks to queue
+[2024-09-08T09:18:59.274+0000] {logging_mixin.py:190} INFO - [2024-09-08T09:18:59.263+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T09:19:29.347+0000] {logging_mixin.py:190} INFO - [2024-09-08T09:19:29.335+0000] {timeout.py:68} ERROR - Process timed out, PID: 95
+[2024-09-08T09:20:01.972+0000] {processor.py:186} INFO - Started process (PID=100) to work on /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T09:20:02.064+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/d_1_batch_processing_spark.py for tasks to queue
+[2024-09-08T09:20:02.323+0000] {logging_mixin.py:190} INFO - [2024-09-08T09:20:02.284+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T09:20:50.434+0000] {logging_mixin.py:190} INFO - [2024-09-08T09:20:50.413+0000] {timeout.py:68} ERROR - Process timed out, PID: 100
+[2024-09-08T09:20:50.442+0000] {logging_mixin.py:190} WARNING - Exception ignored in: <bound method _MultipleClassMarker._remove_item of <sqlalchemy.orm.clsregistry._MultipleClassMarker object at 0x7fbc1721e250>>
+[2024-09-08T09:20:50.449+0000] {logging_mixin.py:190} WARNING - Traceback (most recent call last):
+[2024-09-08T09:20:50.451+0000] {logging_mixin.py:190} WARNING -   File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/orm/clsregistry.py", line 157, in _remove_item
+[2024-09-08T09:20:50.466+0000] {logging_mixin.py:190} WARNING -     def _remove_item(self, ref):
+[2024-09-08T09:20:50.469+0000] {logging_mixin.py:190} WARNING -   File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/timeout.py", line 69, in handle_timeout
+[2024-09-08T09:20:50.471+0000] {logging_mixin.py:190} WARNING -     raise AirflowTaskTimeout(self.error_message)
+[2024-09-08T09:20:50.477+0000] {logging_mixin.py:190} WARNING - airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/d_1_batch_processing_spark.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.10.0/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.10.0/best-practices.html#reducing-dag-complexity, PID: 100
+[2024-09-08T09:20:54.603+0000] {logging_mixin.py:190} INFO - [2024-09-08T09:20:54.561+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/d_1_batch_processing_spark.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/d_1_batch_processing_spark.py", line 69, in <module>
+    op_top_countries_get_data = PythonOperator(
+                                ^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 473, in apply_defaults
+    raise AirflowException(f"missing keyword argument {missing_args.pop()!r}")
+airflow.exceptions.AirflowException: missing keyword argument 'python_callable'
+[2024-09-08T09:20:54.609+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T09:20:54.731+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/d_1_batch_processing_spark.py took 53.250 seconds
+[2024-09-08T09:21:27.180+0000] {processor.py:186} INFO - Started process (PID=105) to work on /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T09:21:27.277+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/d_1_batch_processing_spark.py for tasks to queue
+[2024-09-08T09:21:27.490+0000] {logging_mixin.py:190} INFO - [2024-09-08T09:21:27.459+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T09:23:08.823+0000] {logging_mixin.py:190} INFO - [2024-09-08T09:23:08.750+0000] {timeout.py:68} ERROR - Process timed out, PID: 105
+[2024-09-08T09:23:08.858+0000] {logging_mixin.py:190} WARNING - Exception ignored in: <bound method _MultipleClassMarker._remove_item of <sqlalchemy.orm.clsregistry._MultipleClassMarker object at 0x7fbc1721e250>>
+[2024-09-08T09:23:08.862+0000] {logging_mixin.py:190} WARNING - Traceback (most recent call last):
+[2024-09-08T09:23:08.865+0000] {logging_mixin.py:190} WARNING -   File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/orm/clsregistry.py", line 157, in _remove_item
+[2024-09-08T09:23:08.990+0000] {logging_mixin.py:190} WARNING -     def _remove_item(self, ref):
+[2024-09-08T09:23:09.002+0000] {logging_mixin.py:190} WARNING -   File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/timeout.py", line 69, in handle_timeout
+[2024-09-08T09:23:09.013+0000] {logging_mixin.py:190} WARNING -     raise AirflowTaskTimeout(self.error_message)
+[2024-09-08T09:23:09.045+0000] {logging_mixin.py:190} WARNING - airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/d_1_batch_processing_spark.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.10.0/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.10.0/best-practices.html#reducing-dag-complexity, PID: 105
+[2024-09-08T09:23:24.353+0000] {logging_mixin.py:190} INFO - [2024-09-08T09:23:24.230+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/d_1_batch_processing_spark.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/d_1_batch_processing_spark.py", line 69, in <module>
+    op_top_countries_get_data = PythonOperator(
+                                ^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 473, in apply_defaults
+    raise AirflowException(f"missing keyword argument {missing_args.pop()!r}")
+airflow.exceptions.AirflowException: missing keyword argument 'python_callable'
+[2024-09-08T09:23:24.364+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T09:23:24.742+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/d_1_batch_processing_spark.py took 118.242 seconds
+[2024-09-08T09:23:56.686+0000] {processor.py:186} INFO - Started process (PID=110) to work on /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T09:23:56.762+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/d_1_batch_processing_spark.py for tasks to queue
+[2024-09-08T09:23:56.920+0000] {logging_mixin.py:190} INFO - [2024-09-08T09:23:56.904+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T09:25:11.245+0000] {logging_mixin.py:190} INFO - [2024-09-08T09:25:11.226+0000] {timeout.py:68} ERROR - Process timed out, PID: 110
+[2024-09-08T09:25:11.254+0000] {logging_mixin.py:190} WARNING - Exception ignored in: <bound method _MultipleClassMarker._remove_item of <sqlalchemy.orm.clsregistry._MultipleClassMarker object at 0x7fbc1721e250>>
+[2024-09-08T09:25:11.256+0000] {logging_mixin.py:190} WARNING - Traceback (most recent call last):
+[2024-09-08T09:25:11.258+0000] {logging_mixin.py:190} WARNING -   File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/orm/clsregistry.py", line 157, in _remove_item
+[2024-09-08T09:25:11.271+0000] {logging_mixin.py:190} WARNING -     def _remove_item(self, ref):
+[2024-09-08T09:25:11.273+0000] {logging_mixin.py:190} WARNING -   File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/timeout.py", line 69, in handle_timeout
+[2024-09-08T09:25:11.276+0000] {logging_mixin.py:190} WARNING -     raise AirflowTaskTimeout(self.error_message)
+[2024-09-08T09:25:11.278+0000] {logging_mixin.py:190} WARNING - airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/d_1_batch_processing_spark.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.10.0/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.10.0/best-practices.html#reducing-dag-complexity, PID: 110
+[2024-09-08T09:25:22.670+0000] {logging_mixin.py:190} INFO - [2024-09-08T09:25:22.557+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/d_1_batch_processing_spark.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/d_1_batch_processing_spark.py", line 69, in <module>
+    op_top_countries_get_data = PythonOperator(
+                                ^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 473, in apply_defaults
+    raise AirflowException(f"missing keyword argument {missing_args.pop()!r}")
+airflow.exceptions.AirflowException: missing keyword argument 'python_callable'
+[2024-09-08T09:25:22.675+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T09:25:22.966+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/d_1_batch_processing_spark.py took 86.566 seconds
+[2024-09-08T09:26:03.701+0000] {processor.py:186} INFO - Started process (PID=115) to work on /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T09:26:03.722+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/d_1_batch_processing_spark.py for tasks to queue
+[2024-09-08T09:26:04.145+0000] {logging_mixin.py:190} INFO - [2024-09-08T09:26:04.120+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T09:26:35.825+0000] {logging_mixin.py:190} INFO - [2024-09-08T09:26:35.803+0000] {timeout.py:68} ERROR - Process timed out, PID: 115
+[2024-09-08T09:26:35.832+0000] {logging_mixin.py:190} WARNING - Exception ignored in: <bound method _MultipleClassMarker._remove_item of <sqlalchemy.orm.clsregistry._MultipleClassMarker object at 0x7fbc1721e250>>
+[2024-09-08T09:26:35.834+0000] {logging_mixin.py:190} WARNING - Traceback (most recent call last):
+[2024-09-08T09:26:35.835+0000] {logging_mixin.py:190} WARNING -   File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/orm/clsregistry.py", line 157, in _remove_item
+[2024-09-08T09:26:35.860+0000] {logging_mixin.py:190} WARNING -     def _remove_item(self, ref):
+[2024-09-08T09:26:35.862+0000] {logging_mixin.py:190} WARNING -   File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/timeout.py", line 69, in handle_timeout
+[2024-09-08T09:26:35.867+0000] {logging_mixin.py:190} WARNING -     raise AirflowTaskTimeout(self.error_message)
+[2024-09-08T09:26:35.876+0000] {logging_mixin.py:190} WARNING - airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/d_1_batch_processing_spark.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.10.0/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.10.0/best-practices.html#reducing-dag-complexity, PID: 115
+[2024-09-08T09:26:50.234+0000] {logging_mixin.py:190} INFO - [2024-09-08T09:26:50.188+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/d_1_batch_processing_spark.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/d_1_batch_processing_spark.py", line 69, in <module>
+    op_top_countries_get_data = PythonOperator(
+                                ^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 473, in apply_defaults
+    raise AirflowException(f"missing keyword argument {missing_args.pop()!r}")
+airflow.exceptions.AirflowException: missing keyword argument 'python_callable'
+[2024-09-08T09:26:50.238+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T09:26:50.309+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/d_1_batch_processing_spark.py took 46.962 seconds
+[2024-09-08T09:27:45.637+0000] {processor.py:186} INFO - Started process (PID=120) to work on /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T09:27:45.930+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/d_1_batch_processing_spark.py for tasks to queue
+[2024-09-08T09:27:46.433+0000] {logging_mixin.py:190} INFO - [2024-09-08T09:27:46.381+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T09:28:16.663+0000] {logging_mixin.py:190} INFO - [2024-09-08T09:28:16.572+0000] {timeout.py:68} ERROR - Process timed out, PID: 120
+[2024-09-08T11:04:31.794+0000] {processor.py:186} INFO - Started process (PID=36) to work on /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:04:31.821+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/d_1_batch_processing_spark.py for tasks to queue
+[2024-09-08T11:04:31.914+0000] {logging_mixin.py:190} INFO - [2024-09-08T11:04:31.905+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:04:43.828+0000] {logging_mixin.py:190} INFO - [2024-09-08T11:04:43.804+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/d_1_batch_processing_spark.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/d_1_batch_processing_spark.py", line 69, in <module>
+    op_top_countries_get_data = PythonOperator(
+                                ^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 473, in apply_defaults
+    raise AirflowException(f"missing keyword argument {missing_args.pop()!r}")
+airflow.exceptions.AirflowException: missing keyword argument 'python_callable'
+[2024-09-08T11:04:43.831+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:04:43.887+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/d_1_batch_processing_spark.py took 12.277 seconds
+[2024-09-08T11:05:19.631+0000] {processor.py:186} INFO - Started process (PID=41) to work on /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:05:20.598+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/d_1_batch_processing_spark.py for tasks to queue
+[2024-09-08T11:05:20.964+0000] {logging_mixin.py:190} INFO - [2024-09-08T11:05:20.905+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:05:56.381+0000] {logging_mixin.py:190} INFO - [2024-09-08T11:05:56.369+0000] {timeout.py:68} ERROR - Process timed out, PID: 41
+[2024-09-08T11:05:56.386+0000] {logging_mixin.py:190} WARNING - Exception ignored in: <bound method _MultipleClassMarker._remove_item of <sqlalchemy.orm.clsregistry._MultipleClassMarker object at 0x7f8e3bce6410>>
+[2024-09-08T11:05:56.388+0000] {logging_mixin.py:190} WARNING - Traceback (most recent call last):
+[2024-09-08T11:05:56.391+0000] {logging_mixin.py:190} WARNING -   File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/orm/clsregistry.py", line 157, in _remove_item
+[2024-09-08T11:05:56.408+0000] {logging_mixin.py:190} WARNING -     def _remove_item(self, ref):
+[2024-09-08T11:05:56.411+0000] {logging_mixin.py:190} WARNING -   File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/timeout.py", line 69, in handle_timeout
+[2024-09-08T11:05:56.416+0000] {logging_mixin.py:190} WARNING -     raise AirflowTaskTimeout(self.error_message)
+[2024-09-08T11:05:56.417+0000] {logging_mixin.py:190} WARNING - airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/d_1_batch_processing_spark.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.10.0/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.10.0/best-practices.html#reducing-dag-complexity, PID: 41
+[2024-09-08T11:06:02.562+0000] {logging_mixin.py:190} INFO - [2024-09-08T11:06:02.531+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/d_1_batch_processing_spark.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/d_1_batch_processing_spark.py", line 69, in <module>
+    op_top_countries_get_data = PythonOperator(
+                                ^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 473, in apply_defaults
+    raise AirflowException(f"missing keyword argument {missing_args.pop()!r}")
+airflow.exceptions.AirflowException: missing keyword argument 'python_callable'
+[2024-09-08T11:06:02.566+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:06:02.682+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/d_1_batch_processing_spark.py took 46.013 seconds
+[2024-09-08T11:06:35.032+0000] {processor.py:186} INFO - Started process (PID=46) to work on /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:06:35.052+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/d_1_batch_processing_spark.py for tasks to queue
+[2024-09-08T11:06:35.123+0000] {logging_mixin.py:190} INFO - [2024-09-08T11:06:35.118+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:06:53.220+0000] {logging_mixin.py:190} INFO - [2024-09-08T11:06:53.168+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/d_1_batch_processing_spark.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/d_1_batch_processing_spark.py", line 69, in <module>
+    op_top_countries_get_data = PythonOperator(
+                                ^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 473, in apply_defaults
+    raise AirflowException(f"missing keyword argument {missing_args.pop()!r}")
+airflow.exceptions.AirflowException: missing keyword argument 'python_callable'
+[2024-09-08T11:06:53.224+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:06:53.467+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/d_1_batch_processing_spark.py took 19.068 seconds
+[2024-09-08T11:07:24.454+0000] {processor.py:186} INFO - Started process (PID=51) to work on /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:07:24.457+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/d_1_batch_processing_spark.py for tasks to queue
+[2024-09-08T11:07:24.463+0000] {logging_mixin.py:190} INFO - [2024-09-08T11:07:24.462+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:07:47.681+0000] {logging_mixin.py:190} INFO - [2024-09-08T11:07:47.610+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/d_1_batch_processing_spark.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/d_1_batch_processing_spark.py", line 69, in <module>
+    op_top_countries_get_data = PythonOperator(
+                                ^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 473, in apply_defaults
+    raise AirflowException(f"missing keyword argument {missing_args.pop()!r}")
+airflow.exceptions.AirflowException: missing keyword argument 'python_callable'
+[2024-09-08T11:07:47.696+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:07:48.001+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/d_1_batch_processing_spark.py took 23.561 seconds
+[2024-09-08T11:08:19.872+0000] {processor.py:186} INFO - Started process (PID=56) to work on /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:08:19.966+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/d_1_batch_processing_spark.py for tasks to queue
+[2024-09-08T11:08:20.158+0000] {logging_mixin.py:190} INFO - [2024-09-08T11:08:20.139+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:08:50.501+0000] {logging_mixin.py:190} INFO - [2024-09-08T11:08:50.491+0000] {timeout.py:68} ERROR - Process timed out, PID: 56
+[2024-09-08T11:09:21.134+0000] {processor.py:186} INFO - Started process (PID=61) to work on /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:09:21.137+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/d_1_batch_processing_spark.py for tasks to queue
+[2024-09-08T11:09:21.165+0000] {logging_mixin.py:190} INFO - [2024-09-08T11:09:21.164+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:09:39.299+0000] {logging_mixin.py:190} INFO - [2024-09-08T11:09:39.287+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/d_1_batch_processing_spark.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/d_1_batch_processing_spark.py", line 69, in <module>
+    op_top_countries_get_data = PythonOperator(
+                                ^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 473, in apply_defaults
+    raise AirflowException(f"missing keyword argument {missing_args.pop()!r}")
+airflow.exceptions.AirflowException: missing keyword argument 'python_callable'
+[2024-09-08T11:09:39.303+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:09:39.356+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/d_1_batch_processing_spark.py took 18.248 seconds
+[2024-09-08T11:10:09.456+0000] {processor.py:186} INFO - Started process (PID=66) to work on /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:10:09.458+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/d_1_batch_processing_spark.py for tasks to queue
+[2024-09-08T11:10:09.461+0000] {logging_mixin.py:190} INFO - [2024-09-08T11:10:09.460+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:10:13.737+0000] {logging_mixin.py:190} INFO - [2024-09-08T11:10:13.699+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/d_1_batch_processing_spark.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/d_1_batch_processing_spark.py", line 69, in <module>
+    op_top_countries_get_data = PythonOperator(
+                                ^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 473, in apply_defaults
+    raise AirflowException(f"missing keyword argument {missing_args.pop()!r}")
+airflow.exceptions.AirflowException: missing keyword argument 'python_callable'
+[2024-09-08T11:10:13.740+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:10:14.083+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/d_1_batch_processing_spark.py took 4.633 seconds
+[2024-09-08T11:10:44.592+0000] {processor.py:186} INFO - Started process (PID=71) to work on /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:10:44.607+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/d_1_batch_processing_spark.py for tasks to queue
+[2024-09-08T11:10:44.649+0000] {logging_mixin.py:190} INFO - [2024-09-08T11:10:44.647+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:11:04.866+0000] {logging_mixin.py:190} INFO - [2024-09-08T11:11:04.816+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/d_1_batch_processing_spark.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/d_1_batch_processing_spark.py", line 69, in <module>
+    op_top_countries_get_data = PythonOperator(
+                                ^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 473, in apply_defaults
+    raise AirflowException(f"missing keyword argument {missing_args.pop()!r}")
+airflow.exceptions.AirflowException: missing keyword argument 'python_callable'
+[2024-09-08T11:11:04.869+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:11:05.064+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/d_1_batch_processing_spark.py took 20.529 seconds
+[2024-09-08T11:11:35.585+0000] {processor.py:186} INFO - Started process (PID=76) to work on /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:11:35.588+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/d_1_batch_processing_spark.py for tasks to queue
+[2024-09-08T11:11:35.593+0000] {logging_mixin.py:190} INFO - [2024-09-08T11:11:35.593+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:12:11.919+0000] {logging_mixin.py:190} INFO - [2024-09-08T11:12:11.701+0000] {timeout.py:68} ERROR - Process timed out, PID: 76
+[2024-09-08T11:12:11.965+0000] {logging_mixin.py:190} WARNING - Exception ignored in: <bound method _MultipleClassMarker._remove_item of <sqlalchemy.orm.clsregistry._MultipleClassMarker object at 0x7f8e3bce6410>>
+[2024-09-08T11:12:11.972+0000] {logging_mixin.py:190} WARNING - Traceback (most recent call last):
+[2024-09-08T11:12:11.975+0000] {logging_mixin.py:190} WARNING -   File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/orm/clsregistry.py", line 157, in _remove_item
+[2024-09-08T11:12:12.683+0000] {logging_mixin.py:190} WARNING -     def _remove_item(self, ref):
+[2024-09-08T11:12:12.704+0000] {logging_mixin.py:190} WARNING -   File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/timeout.py", line 69, in handle_timeout
+[2024-09-08T11:12:12.729+0000] {logging_mixin.py:190} WARNING -     raise AirflowTaskTimeout(self.error_message)
+[2024-09-08T11:12:12.757+0000] {logging_mixin.py:190} WARNING - airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/d_1_batch_processing_spark.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.10.0/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.10.0/best-practices.html#reducing-dag-complexity, PID: 76
+[2024-09-08T11:12:31.255+0000] {logging_mixin.py:190} INFO - [2024-09-08T11:12:30.907+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/d_1_batch_processing_spark.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/d_1_batch_processing_spark.py", line 69, in <module>
+    op_top_countries_get_data = PythonOperator(
+                                ^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 473, in apply_defaults
+    raise AirflowException(f"missing keyword argument {missing_args.pop()!r}")
+airflow.exceptions.AirflowException: missing keyword argument 'python_callable'
+[2024-09-08T11:12:31.300+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:12:32.620+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/d_1_batch_processing_spark.py took 57.057 seconds
+[2024-09-08T11:13:03.946+0000] {processor.py:186} INFO - Started process (PID=81) to work on /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:13:03.954+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/d_1_batch_processing_spark.py for tasks to queue
+[2024-09-08T11:13:03.975+0000] {logging_mixin.py:190} INFO - [2024-09-08T11:13:03.970+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:13:29.283+0000] {logging_mixin.py:190} INFO - [2024-09-08T11:13:29.255+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/d_1_batch_processing_spark.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/d_1_batch_processing_spark.py", line 69, in <module>
+    op_top_countries_get_data = PythonOperator(
+                                ^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 473, in apply_defaults
+    raise AirflowException(f"missing keyword argument {missing_args.pop()!r}")
+airflow.exceptions.AirflowException: missing keyword argument 'python_callable'
+[2024-09-08T11:13:29.286+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:13:29.470+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/d_1_batch_processing_spark.py took 25.591 seconds
+[2024-09-08T11:14:00.422+0000] {processor.py:186} INFO - Started process (PID=86) to work on /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:14:00.474+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/d_1_batch_processing_spark.py for tasks to queue
+[2024-09-08T11:14:00.522+0000] {logging_mixin.py:190} INFO - [2024-09-08T11:14:00.521+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:14:06.876+0000] {logging_mixin.py:190} INFO - [2024-09-08T11:14:06.834+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/d_1_batch_processing_spark.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/d_1_batch_processing_spark.py", line 69, in <module>
+    op_top_countries_get_data = PythonOperator(
+                                ^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 473, in apply_defaults
+    raise AirflowException(f"missing keyword argument {missing_args.pop()!r}")
+airflow.exceptions.AirflowException: missing keyword argument 'python_callable'
+[2024-09-08T11:14:06.881+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:14:07.015+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/d_1_batch_processing_spark.py took 6.603 seconds
+[2024-09-08T11:14:37.399+0000] {processor.py:186} INFO - Started process (PID=91) to work on /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:14:37.414+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/d_1_batch_processing_spark.py for tasks to queue
+[2024-09-08T11:14:37.449+0000] {logging_mixin.py:190} INFO - [2024-09-08T11:14:37.443+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:14:42.031+0000] {logging_mixin.py:190} INFO - [2024-09-08T11:14:42.002+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/d_1_batch_processing_spark.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/d_1_batch_processing_spark.py", line 69, in <module>
+    op_top_countries_get_data = PythonOperator(
+                                ^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 473, in apply_defaults
+    raise AirflowException(f"missing keyword argument {missing_args.pop()!r}")
+airflow.exceptions.AirflowException: missing keyword argument 'python_callable'
+[2024-09-08T11:14:42.037+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:14:42.120+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/d_1_batch_processing_spark.py took 4.779 seconds
+[2024-09-08T11:15:12.492+0000] {processor.py:186} INFO - Started process (PID=96) to work on /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:15:12.494+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/d_1_batch_processing_spark.py for tasks to queue
+[2024-09-08T11:15:12.497+0000] {logging_mixin.py:190} INFO - [2024-09-08T11:15:12.497+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:15:16.487+0000] {logging_mixin.py:190} INFO - [2024-09-08T11:15:16.415+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/d_1_batch_processing_spark.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/d_1_batch_processing_spark.py", line 69, in <module>
+    op_top_countries_get_data = PythonOperator(
+                                ^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 473, in apply_defaults
+    raise AirflowException(f"missing keyword argument {missing_args.pop()!r}")
+airflow.exceptions.AirflowException: missing keyword argument 'python_callable'
+[2024-09-08T11:15:16.490+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:15:16.591+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/d_1_batch_processing_spark.py took 4.107 seconds
+[2024-09-08T11:15:46.805+0000] {processor.py:186} INFO - Started process (PID=101) to work on /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:15:46.809+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/d_1_batch_processing_spark.py for tasks to queue
+[2024-09-08T11:15:46.816+0000] {logging_mixin.py:190} INFO - [2024-09-08T11:15:46.815+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:15:47.612+0000] {logging_mixin.py:190} INFO - [2024-09-08T11:15:47.589+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/d_1_batch_processing_spark.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/d_1_batch_processing_spark.py", line 69, in <module>
+    op_top_countries_get_data = PythonOperator(
+                                ^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 473, in apply_defaults
+    raise AirflowException(f"missing keyword argument {missing_args.pop()!r}")
+airflow.exceptions.AirflowException: missing keyword argument 'python_callable'
+[2024-09-08T11:15:47.615+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:15:47.707+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/d_1_batch_processing_spark.py took 0.919 seconds
+[2024-09-08T11:16:17.958+0000] {processor.py:186} INFO - Started process (PID=106) to work on /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:16:17.960+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/d_1_batch_processing_spark.py for tasks to queue
+[2024-09-08T11:16:17.963+0000] {logging_mixin.py:190} INFO - [2024-09-08T11:16:17.963+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:16:18.760+0000] {logging_mixin.py:190} INFO - [2024-09-08T11:16:18.753+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/d_1_batch_processing_spark.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/d_1_batch_processing_spark.py", line 69, in <module>
+    op_top_countries_get_data = PythonOperator(
+                                ^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 473, in apply_defaults
+    raise AirflowException(f"missing keyword argument {missing_args.pop()!r}")
+airflow.exceptions.AirflowException: missing keyword argument 'python_callable'
+[2024-09-08T11:16:18.761+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:16:18.817+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/d_1_batch_processing_spark.py took 0.868 seconds
+[2024-09-08T11:16:49.114+0000] {processor.py:186} INFO - Started process (PID=111) to work on /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:16:49.124+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/d_1_batch_processing_spark.py for tasks to queue
+[2024-09-08T11:16:49.174+0000] {logging_mixin.py:190} INFO - [2024-09-08T11:16:49.171+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:16:59.029+0000] {logging_mixin.py:190} INFO - [2024-09-08T11:16:58.964+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/d_1_batch_processing_spark.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/d_1_batch_processing_spark.py", line 69, in <module>
+    op_top_countries_get_data = PythonOperator(
+                                ^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 473, in apply_defaults
+    raise AirflowException(f"missing keyword argument {missing_args.pop()!r}")
+airflow.exceptions.AirflowException: missing keyword argument 'python_callable'
+[2024-09-08T11:16:59.036+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:16:59.187+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/d_1_batch_processing_spark.py took 10.139 seconds
+[2024-09-08T11:17:29.529+0000] {processor.py:186} INFO - Started process (PID=116) to work on /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:17:29.532+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/d_1_batch_processing_spark.py for tasks to queue
+[2024-09-08T11:17:29.740+0000] {logging_mixin.py:190} INFO - [2024-09-08T11:17:29.739+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:17:32.659+0000] {logging_mixin.py:190} INFO - [2024-09-08T11:17:32.648+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/d_1_batch_processing_spark.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/d_1_batch_processing_spark.py", line 69, in <module>
+    op_top_countries_get_data = PythonOperator(
+                                ^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 473, in apply_defaults
+    raise AirflowException(f"missing keyword argument {missing_args.pop()!r}")
+airflow.exceptions.AirflowException: missing keyword argument 'python_callable'
+[2024-09-08T11:17:32.662+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:17:32.713+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/d_1_batch_processing_spark.py took 3.203 seconds
+[2024-09-08T11:18:03.032+0000] {processor.py:186} INFO - Started process (PID=121) to work on /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:18:03.035+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/d_1_batch_processing_spark.py for tasks to queue
+[2024-09-08T11:18:03.040+0000] {logging_mixin.py:190} INFO - [2024-09-08T11:18:03.040+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:18:03.561+0000] {logging_mixin.py:190} INFO - [2024-09-08T11:18:03.549+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/d_1_batch_processing_spark.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/d_1_batch_processing_spark.py", line 69, in <module>
+    op_top_countries_get_data = PythonOperator(
+                                ^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 473, in apply_defaults
+    raise AirflowException(f"missing keyword argument {missing_args.pop()!r}")
+airflow.exceptions.AirflowException: missing keyword argument 'python_callable'
+[2024-09-08T11:18:03.564+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:18:03.632+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/d_1_batch_processing_spark.py took 0.612 seconds
+[2024-09-08T11:18:34.254+0000] {processor.py:186} INFO - Started process (PID=126) to work on /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:18:34.256+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/d_1_batch_processing_spark.py for tasks to queue
+[2024-09-08T11:18:34.261+0000] {logging_mixin.py:190} INFO - [2024-09-08T11:18:34.260+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:18:36.554+0000] {logging_mixin.py:190} INFO - [2024-09-08T11:18:36.532+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/d_1_batch_processing_spark.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/d_1_batch_processing_spark.py", line 69, in <module>
+    op_top_countries_get_data = PythonOperator(
+                                ^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 473, in apply_defaults
+    raise AirflowException(f"missing keyword argument {missing_args.pop()!r}")
+airflow.exceptions.AirflowException: missing keyword argument 'python_callable'
+[2024-09-08T11:18:36.556+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:18:36.798+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/d_1_batch_processing_spark.py took 2.550 seconds
+[2024-09-08T11:19:07.005+0000] {processor.py:186} INFO - Started process (PID=131) to work on /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:19:07.007+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/d_1_batch_processing_spark.py for tasks to queue
+[2024-09-08T11:19:07.010+0000] {logging_mixin.py:190} INFO - [2024-09-08T11:19:07.009+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:19:09.359+0000] {logging_mixin.py:190} INFO - [2024-09-08T11:19:09.298+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/d_1_batch_processing_spark.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/d_1_batch_processing_spark.py", line 69, in <module>
+    op_top_countries_get_data = PythonOperator(
+                                ^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 473, in apply_defaults
+    raise AirflowException(f"missing keyword argument {missing_args.pop()!r}")
+airflow.exceptions.AirflowException: missing keyword argument 'python_callable'
+[2024-09-08T11:19:09.368+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:19:09.461+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/d_1_batch_processing_spark.py took 2.462 seconds
+[2024-09-08T11:19:39.655+0000] {processor.py:186} INFO - Started process (PID=136) to work on /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:19:39.658+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/d_1_batch_processing_spark.py for tasks to queue
+[2024-09-08T11:19:39.664+0000] {logging_mixin.py:190} INFO - [2024-09-08T11:19:39.663+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:19:40.261+0000] {logging_mixin.py:190} INFO - [2024-09-08T11:19:40.251+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/d_1_batch_processing_spark.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/d_1_batch_processing_spark.py", line 69, in <module>
+    op_top_countries_get_data = PythonOperator(
+                                ^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 473, in apply_defaults
+    raise AirflowException(f"missing keyword argument {missing_args.pop()!r}")
+airflow.exceptions.AirflowException: missing keyword argument 'python_callable'
+[2024-09-08T11:19:40.263+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:19:40.307+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/d_1_batch_processing_spark.py took 0.662 seconds
+[2024-09-08T11:20:10.492+0000] {processor.py:186} INFO - Started process (PID=141) to work on /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:20:10.495+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/d_1_batch_processing_spark.py for tasks to queue
+[2024-09-08T11:20:10.499+0000] {logging_mixin.py:190} INFO - [2024-09-08T11:20:10.498+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:20:11.027+0000] {logging_mixin.py:190} INFO - [2024-09-08T11:20:11.018+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/d_1_batch_processing_spark.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/d_1_batch_processing_spark.py", line 69, in <module>
+    op_top_countries_get_data = PythonOperator(
+                                ^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 473, in apply_defaults
+    raise AirflowException(f"missing keyword argument {missing_args.pop()!r}")
+airflow.exceptions.AirflowException: missing keyword argument 'python_callable'
+[2024-09-08T11:20:11.029+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:20:11.145+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/d_1_batch_processing_spark.py took 0.663 seconds
+[2024-09-08T11:20:41.350+0000] {processor.py:186} INFO - Started process (PID=146) to work on /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:20:41.352+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/d_1_batch_processing_spark.py for tasks to queue
+[2024-09-08T11:20:41.357+0000] {logging_mixin.py:190} INFO - [2024-09-08T11:20:41.356+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:20:41.854+0000] {logging_mixin.py:190} INFO - [2024-09-08T11:20:41.845+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/d_1_batch_processing_spark.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/d_1_batch_processing_spark.py", line 69, in <module>
+    op_top_countries_get_data = PythonOperator(
+                                ^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 473, in apply_defaults
+    raise AirflowException(f"missing keyword argument {missing_args.pop()!r}")
+airflow.exceptions.AirflowException: missing keyword argument 'python_callable'
+[2024-09-08T11:20:41.856+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:20:41.904+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/d_1_batch_processing_spark.py took 0.563 seconds
+[2024-09-08T11:21:12.096+0000] {processor.py:186} INFO - Started process (PID=151) to work on /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:21:12.098+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/d_1_batch_processing_spark.py for tasks to queue
+[2024-09-08T11:21:12.103+0000] {logging_mixin.py:190} INFO - [2024-09-08T11:21:12.102+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:21:12.661+0000] {logging_mixin.py:190} INFO - [2024-09-08T11:21:12.651+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/d_1_batch_processing_spark.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/d_1_batch_processing_spark.py", line 69, in <module>
+    op_top_countries_get_data = PythonOperator(
+                                ^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 473, in apply_defaults
+    raise AirflowException(f"missing keyword argument {missing_args.pop()!r}")
+airflow.exceptions.AirflowException: missing keyword argument 'python_callable'
+[2024-09-08T11:21:12.664+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:21:12.734+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/d_1_batch_processing_spark.py took 0.650 seconds
+[2024-09-08T11:21:42.918+0000] {processor.py:186} INFO - Started process (PID=156) to work on /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:21:42.920+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/d_1_batch_processing_spark.py for tasks to queue
+[2024-09-08T11:21:42.926+0000] {logging_mixin.py:190} INFO - [2024-09-08T11:21:42.925+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:21:43.515+0000] {logging_mixin.py:190} INFO - [2024-09-08T11:21:43.505+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/d_1_batch_processing_spark.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/d_1_batch_processing_spark.py", line 69, in <module>
+    op_top_countries_get_data = PythonOperator(
+                                ^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 473, in apply_defaults
+    raise AirflowException(f"missing keyword argument {missing_args.pop()!r}")
+airflow.exceptions.AirflowException: missing keyword argument 'python_callable'
+[2024-09-08T11:21:43.518+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:21:43.586+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/d_1_batch_processing_spark.py took 0.678 seconds
+[2024-09-08T11:22:13.760+0000] {processor.py:186} INFO - Started process (PID=161) to work on /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:22:13.762+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/d_1_batch_processing_spark.py for tasks to queue
+[2024-09-08T11:22:13.767+0000] {logging_mixin.py:190} INFO - [2024-09-08T11:22:13.766+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:22:14.285+0000] {logging_mixin.py:190} INFO - [2024-09-08T11:22:14.277+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/d_1_batch_processing_spark.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/d_1_batch_processing_spark.py", line 69, in <module>
+    op_top_countries_get_data = PythonOperator(
+                                ^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 473, in apply_defaults
+    raise AirflowException(f"missing keyword argument {missing_args.pop()!r}")
+airflow.exceptions.AirflowException: missing keyword argument 'python_callable'
+[2024-09-08T11:22:14.288+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:22:14.325+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/d_1_batch_processing_spark.py took 0.575 seconds
+[2024-09-08T11:22:44.500+0000] {processor.py:186} INFO - Started process (PID=166) to work on /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:22:44.502+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/d_1_batch_processing_spark.py for tasks to queue
+[2024-09-08T11:22:44.508+0000] {logging_mixin.py:190} INFO - [2024-09-08T11:22:44.508+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:22:45.045+0000] {logging_mixin.py:190} INFO - [2024-09-08T11:22:45.036+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/d_1_batch_processing_spark.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/d_1_batch_processing_spark.py", line 69, in <module>
+    op_top_countries_get_data = PythonOperator(
+                                ^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 473, in apply_defaults
+    raise AirflowException(f"missing keyword argument {missing_args.pop()!r}")
+airflow.exceptions.AirflowException: missing keyword argument 'python_callable'
+[2024-09-08T11:22:45.047+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:22:45.091+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/d_1_batch_processing_spark.py took 0.601 seconds
+[2024-09-08T11:23:15.366+0000] {processor.py:186} INFO - Started process (PID=171) to work on /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:23:15.368+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/d_1_batch_processing_spark.py for tasks to queue
+[2024-09-08T11:23:15.373+0000] {logging_mixin.py:190} INFO - [2024-09-08T11:23:15.372+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:23:15.857+0000] {logging_mixin.py:190} INFO - [2024-09-08T11:23:15.849+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/d_1_batch_processing_spark.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/d_1_batch_processing_spark.py", line 69, in <module>
+    op_top_countries_get_data = PythonOperator(
+                                ^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 473, in apply_defaults
+    raise AirflowException(f"missing keyword argument {missing_args.pop()!r}")
+airflow.exceptions.AirflowException: missing keyword argument 'python_callable'
+[2024-09-08T11:23:15.860+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:23:15.929+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/d_1_batch_processing_spark.py took 0.572 seconds
+[2024-09-08T11:23:46.101+0000] {processor.py:186} INFO - Started process (PID=176) to work on /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:23:46.103+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/d_1_batch_processing_spark.py for tasks to queue
+[2024-09-08T11:23:46.106+0000] {logging_mixin.py:190} INFO - [2024-09-08T11:23:46.106+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:23:46.509+0000] {logging_mixin.py:190} INFO - [2024-09-08T11:23:46.501+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/d_1_batch_processing_spark.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/d_1_batch_processing_spark.py", line 69, in <module>
+    op_top_countries_get_data = PythonOperator(
+                                ^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 473, in apply_defaults
+    raise AirflowException(f"missing keyword argument {missing_args.pop()!r}")
+airflow.exceptions.AirflowException: missing keyword argument 'python_callable'
+[2024-09-08T11:23:46.512+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:23:46.555+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/d_1_batch_processing_spark.py took 0.460 seconds
+[2024-09-08T11:24:16.780+0000] {processor.py:186} INFO - Started process (PID=181) to work on /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:24:16.781+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/d_1_batch_processing_spark.py for tasks to queue
+[2024-09-08T11:24:16.784+0000] {logging_mixin.py:190} INFO - [2024-09-08T11:24:16.784+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:24:17.194+0000] {logging_mixin.py:190} INFO - [2024-09-08T11:24:17.185+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/d_1_batch_processing_spark.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/d_1_batch_processing_spark.py", line 69, in <module>
+    op_top_countries_get_data = PythonOperator(
+                                ^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 473, in apply_defaults
+    raise AirflowException(f"missing keyword argument {missing_args.pop()!r}")
+airflow.exceptions.AirflowException: missing keyword argument 'python_callable'
+[2024-09-08T11:24:17.196+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:24:17.446+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/d_1_batch_processing_spark.py took 0.672 seconds
+[2024-09-08T11:24:47.687+0000] {processor.py:186} INFO - Started process (PID=186) to work on /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:24:47.689+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/d_1_batch_processing_spark.py for tasks to queue
+[2024-09-08T11:24:47.692+0000] {logging_mixin.py:190} INFO - [2024-09-08T11:24:47.692+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:24:48.127+0000] {logging_mixin.py:190} INFO - [2024-09-08T11:24:48.120+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/d_1_batch_processing_spark.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/d_1_batch_processing_spark.py", line 69, in <module>
+    op_top_countries_get_data = PythonOperator(
+                                ^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 473, in apply_defaults
+    raise AirflowException(f"missing keyword argument {missing_args.pop()!r}")
+airflow.exceptions.AirflowException: missing keyword argument 'python_callable'
+[2024-09-08T11:24:48.130+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:24:48.170+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/d_1_batch_processing_spark.py took 0.489 seconds
+[2024-09-08T11:25:18.421+0000] {processor.py:186} INFO - Started process (PID=191) to work on /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:25:18.422+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/d_1_batch_processing_spark.py for tasks to queue
+[2024-09-08T11:25:18.426+0000] {logging_mixin.py:190} INFO - [2024-09-08T11:25:18.425+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:25:18.847+0000] {logging_mixin.py:190} INFO - [2024-09-08T11:25:18.839+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/d_1_batch_processing_spark.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/d_1_batch_processing_spark.py", line 69, in <module>
+    op_top_countries_get_data = PythonOperator(
+                                ^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 473, in apply_defaults
+    raise AirflowException(f"missing keyword argument {missing_args.pop()!r}")
+airflow.exceptions.AirflowException: missing keyword argument 'python_callable'
+[2024-09-08T11:25:18.850+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:25:18.912+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/d_1_batch_processing_spark.py took 0.497 seconds
+[2024-09-08T11:25:49.127+0000] {processor.py:186} INFO - Started process (PID=196) to work on /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:25:49.129+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/d_1_batch_processing_spark.py for tasks to queue
+[2024-09-08T11:25:49.132+0000] {logging_mixin.py:190} INFO - [2024-09-08T11:25:49.131+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:25:49.536+0000] {logging_mixin.py:190} INFO - [2024-09-08T11:25:49.527+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/d_1_batch_processing_spark.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/d_1_batch_processing_spark.py", line 69, in <module>
+    op_top_countries_get_data = PythonOperator(
+                                ^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 473, in apply_defaults
+    raise AirflowException(f"missing keyword argument {missing_args.pop()!r}")
+airflow.exceptions.AirflowException: missing keyword argument 'python_callable'
+[2024-09-08T11:25:49.538+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:25:50.076+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/d_1_batch_processing_spark.py took 0.955 seconds
+[2024-09-08T11:26:20.308+0000] {processor.py:186} INFO - Started process (PID=201) to work on /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:26:20.309+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/d_1_batch_processing_spark.py for tasks to queue
+[2024-09-08T11:26:20.312+0000] {logging_mixin.py:190} INFO - [2024-09-08T11:26:20.312+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:26:20.716+0000] {logging_mixin.py:190} INFO - [2024-09-08T11:26:20.707+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/d_1_batch_processing_spark.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/d_1_batch_processing_spark.py", line 69, in <module>
+    op_top_countries_get_data = PythonOperator(
+                                ^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 473, in apply_defaults
+    raise AirflowException(f"missing keyword argument {missing_args.pop()!r}")
+airflow.exceptions.AirflowException: missing keyword argument 'python_callable'
+[2024-09-08T11:26:20.718+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:26:20.752+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/d_1_batch_processing_spark.py took 0.450 seconds
+[2024-09-08T11:26:50.982+0000] {processor.py:186} INFO - Started process (PID=206) to work on /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:26:50.989+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/d_1_batch_processing_spark.py for tasks to queue
+[2024-09-08T11:26:50.993+0000] {logging_mixin.py:190} INFO - [2024-09-08T11:26:50.992+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:26:51.599+0000] {logging_mixin.py:190} INFO - [2024-09-08T11:26:51.593+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/d_1_batch_processing_spark.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/d_1_batch_processing_spark.py", line 69, in <module>
+    op_top_countries_get_data = PythonOperator(
+                                ^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 473, in apply_defaults
+    raise AirflowException(f"missing keyword argument {missing_args.pop()!r}")
+airflow.exceptions.AirflowException: missing keyword argument 'python_callable'
+[2024-09-08T11:26:51.601+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:26:51.688+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/d_1_batch_processing_spark.py took 0.714 seconds
+[2024-09-08T11:27:22.481+0000] {processor.py:186} INFO - Started process (PID=211) to work on /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:27:22.487+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/d_1_batch_processing_spark.py for tasks to queue
+[2024-09-08T11:27:22.502+0000] {logging_mixin.py:190} INFO - [2024-09-08T11:27:22.500+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:27:25.065+0000] {logging_mixin.py:190} INFO - [2024-09-08T11:27:25.034+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/d_1_batch_processing_spark.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/d_1_batch_processing_spark.py", line 69, in <module>
+    op_top_countries_get_data = PythonOperator(
+                                ^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 473, in apply_defaults
+    raise AirflowException(f"missing keyword argument {missing_args.pop()!r}")
+airflow.exceptions.AirflowException: missing keyword argument 'python_callable'
+[2024-09-08T11:27:25.070+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:27:25.150+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/d_1_batch_processing_spark.py took 2.697 seconds
+[2024-09-08T11:27:55.467+0000] {processor.py:186} INFO - Started process (PID=216) to work on /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:27:55.468+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/d_1_batch_processing_spark.py for tasks to queue
+[2024-09-08T11:27:55.471+0000] {logging_mixin.py:190} INFO - [2024-09-08T11:27:55.471+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:27:55.903+0000] {logging_mixin.py:190} INFO - [2024-09-08T11:27:55.892+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/d_1_batch_processing_spark.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/d_1_batch_processing_spark.py", line 69, in <module>
+    op_top_countries_get_data = PythonOperator(
+                                ^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 473, in apply_defaults
+    raise AirflowException(f"missing keyword argument {missing_args.pop()!r}")
+airflow.exceptions.AirflowException: missing keyword argument 'python_callable'
+[2024-09-08T11:27:55.905+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:27:55.947+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/d_1_batch_processing_spark.py took 0.487 seconds
+[2024-09-08T11:28:26.265+0000] {processor.py:186} INFO - Started process (PID=221) to work on /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:28:26.266+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/d_1_batch_processing_spark.py for tasks to queue
+[2024-09-08T11:28:26.269+0000] {logging_mixin.py:190} INFO - [2024-09-08T11:28:26.269+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:28:26.666+0000] {logging_mixin.py:190} INFO - [2024-09-08T11:28:26.659+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/d_1_batch_processing_spark.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/d_1_batch_processing_spark.py", line 69, in <module>
+    op_top_countries_get_data = PythonOperator(
+                                ^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 473, in apply_defaults
+    raise AirflowException(f"missing keyword argument {missing_args.pop()!r}")
+airflow.exceptions.AirflowException: missing keyword argument 'python_callable'
+[2024-09-08T11:28:26.668+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:28:26.722+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/d_1_batch_processing_spark.py took 0.464 seconds
+[2024-09-08T11:28:56.900+0000] {processor.py:186} INFO - Started process (PID=226) to work on /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:28:56.902+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/d_1_batch_processing_spark.py for tasks to queue
+[2024-09-08T11:28:56.905+0000] {logging_mixin.py:190} INFO - [2024-09-08T11:28:56.905+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:28:57.393+0000] {logging_mixin.py:190} INFO - [2024-09-08T11:28:57.383+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/d_1_batch_processing_spark.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/d_1_batch_processing_spark.py", line 69, in <module>
+    op_top_countries_get_data = PythonOperator(
+                                ^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 473, in apply_defaults
+    raise AirflowException(f"missing keyword argument {missing_args.pop()!r}")
+airflow.exceptions.AirflowException: missing keyword argument 'python_callable'
+[2024-09-08T11:28:57.396+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:28:57.453+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/d_1_batch_processing_spark.py took 0.561 seconds
+[2024-09-08T11:29:27.666+0000] {processor.py:186} INFO - Started process (PID=231) to work on /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:29:27.668+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/d_1_batch_processing_spark.py for tasks to queue
+[2024-09-08T11:29:27.671+0000] {logging_mixin.py:190} INFO - [2024-09-08T11:29:27.671+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:29:28.082+0000] {logging_mixin.py:190} INFO - [2024-09-08T11:29:28.073+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/d_1_batch_processing_spark.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/d_1_batch_processing_spark.py", line 69, in <module>
+    op_top_countries_get_data = PythonOperator(
+                                ^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 473, in apply_defaults
+    raise AirflowException(f"missing keyword argument {missing_args.pop()!r}")
+airflow.exceptions.AirflowException: missing keyword argument 'python_callable'
+[2024-09-08T11:29:28.084+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:29:28.119+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/d_1_batch_processing_spark.py took 0.459 seconds
+[2024-09-08T11:29:58.364+0000] {processor.py:186} INFO - Started process (PID=236) to work on /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:29:58.366+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/d_1_batch_processing_spark.py for tasks to queue
+[2024-09-08T11:29:58.369+0000] {logging_mixin.py:190} INFO - [2024-09-08T11:29:58.368+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:29:58.776+0000] {logging_mixin.py:190} INFO - [2024-09-08T11:29:58.769+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/d_1_batch_processing_spark.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/d_1_batch_processing_spark.py", line 69, in <module>
+    op_top_countries_get_data = PythonOperator(
+                                ^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 473, in apply_defaults
+    raise AirflowException(f"missing keyword argument {missing_args.pop()!r}")
+airflow.exceptions.AirflowException: missing keyword argument 'python_callable'
+[2024-09-08T11:29:58.778+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:29:58.865+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/d_1_batch_processing_spark.py took 0.508 seconds
+[2024-09-08T11:30:29.094+0000] {processor.py:186} INFO - Started process (PID=241) to work on /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:30:29.095+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/d_1_batch_processing_spark.py for tasks to queue
+[2024-09-08T11:30:29.098+0000] {logging_mixin.py:190} INFO - [2024-09-08T11:30:29.098+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:30:29.567+0000] {logging_mixin.py:190} INFO - [2024-09-08T11:30:29.560+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/d_1_batch_processing_spark.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/d_1_batch_processing_spark.py", line 69, in <module>
+    op_top_countries_get_data = PythonOperator(
+                                ^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 473, in apply_defaults
+    raise AirflowException(f"missing keyword argument {missing_args.pop()!r}")
+airflow.exceptions.AirflowException: missing keyword argument 'python_callable'
+[2024-09-08T11:30:29.570+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:30:29.615+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/d_1_batch_processing_spark.py took 0.529 seconds
+[2024-09-08T11:30:59.854+0000] {processor.py:186} INFO - Started process (PID=246) to work on /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:30:59.856+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/d_1_batch_processing_spark.py for tasks to queue
+[2024-09-08T11:30:59.859+0000] {logging_mixin.py:190} INFO - [2024-09-08T11:30:59.858+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:31:00.266+0000] {logging_mixin.py:190} INFO - [2024-09-08T11:31:00.259+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/d_1_batch_processing_spark.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/d_1_batch_processing_spark.py", line 69, in <module>
+    op_top_countries_get_data = PythonOperator(
+                                ^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 473, in apply_defaults
+    raise AirflowException(f"missing keyword argument {missing_args.pop()!r}")
+airflow.exceptions.AirflowException: missing keyword argument 'python_callable'
+[2024-09-08T11:31:00.268+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:31:00.306+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/d_1_batch_processing_spark.py took 0.458 seconds
+[2024-09-08T11:31:30.524+0000] {processor.py:186} INFO - Started process (PID=251) to work on /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:31:30.526+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/d_1_batch_processing_spark.py for tasks to queue
+[2024-09-08T11:31:30.529+0000] {logging_mixin.py:190} INFO - [2024-09-08T11:31:30.529+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:31:30.947+0000] {logging_mixin.py:190} INFO - [2024-09-08T11:31:30.938+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/d_1_batch_processing_spark.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/d_1_batch_processing_spark.py", line 69, in <module>
+    op_top_countries_get_data = PythonOperator(
+                                ^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 473, in apply_defaults
+    raise AirflowException(f"missing keyword argument {missing_args.pop()!r}")
+airflow.exceptions.AirflowException: missing keyword argument 'python_callable'
+[2024-09-08T11:31:30.949+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:31:31.044+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/d_1_batch_processing_spark.py took 0.527 seconds
+[2024-09-08T11:32:01.472+0000] {processor.py:186} INFO - Started process (PID=256) to work on /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:32:01.479+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/d_1_batch_processing_spark.py for tasks to queue
+[2024-09-08T11:32:01.490+0000] {logging_mixin.py:190} INFO - [2024-09-08T11:32:01.489+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:32:03.477+0000] {logging_mixin.py:190} INFO - [2024-09-08T11:32:03.465+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/d_1_batch_processing_spark.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/d_1_batch_processing_spark.py", line 69, in <module>
+    op_top_countries_get_data = PythonOperator(
+                                ^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 473, in apply_defaults
+    raise AirflowException(f"missing keyword argument {missing_args.pop()!r}")
+airflow.exceptions.AirflowException: missing keyword argument 'python_callable'
+[2024-09-08T11:32:03.480+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:32:03.583+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/d_1_batch_processing_spark.py took 2.129 seconds
+[2024-09-08T11:32:33.804+0000] {processor.py:186} INFO - Started process (PID=261) to work on /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:32:33.805+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/d_1_batch_processing_spark.py for tasks to queue
+[2024-09-08T11:32:33.808+0000] {logging_mixin.py:190} INFO - [2024-09-08T11:32:33.808+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:32:35.544+0000] {logging_mixin.py:190} INFO - [2024-09-08T11:32:35.523+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/d_1_batch_processing_spark.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/d_1_batch_processing_spark.py", line 69, in <module>
+    op_top_countries_get_data = PythonOperator(
+                                ^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 473, in apply_defaults
+    raise AirflowException(f"missing keyword argument {missing_args.pop()!r}")
+airflow.exceptions.AirflowException: missing keyword argument 'python_callable'
+[2024-09-08T11:32:35.547+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:32:35.709+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/d_1_batch_processing_spark.py took 1.911 seconds
+[2024-09-08T11:33:05.999+0000] {processor.py:186} INFO - Started process (PID=266) to work on /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:33:06.001+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/d_1_batch_processing_spark.py for tasks to queue
+[2024-09-08T11:33:06.004+0000] {logging_mixin.py:190} INFO - [2024-09-08T11:33:06.004+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:33:06.905+0000] {logging_mixin.py:190} INFO - [2024-09-08T11:33:06.867+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/d_1_batch_processing_spark.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/d_1_batch_processing_spark.py", line 69, in <module>
+    op_top_countries_get_data = PythonOperator(
+                                ^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 473, in apply_defaults
+    raise AirflowException(f"missing keyword argument {missing_args.pop()!r}")
+airflow.exceptions.AirflowException: missing keyword argument 'python_callable'
+[2024-09-08T11:33:06.908+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/d_1_batch_processing_spark.py
+[2024-09-08T11:33:07.091+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/d_1_batch_processing_spark.py took 1.098 seconds
